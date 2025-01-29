@@ -1,1 +1,0 @@
-{"wifi":[{"ssid":"yash-it","pass":"0514487271902655"},{"ssid":"yash-it1","pass":"0514487271902655"}], "mqtt":{"server":"192.168.6.190","port":1883,"user":"fhem","pass":"olpP5","refresh":20}, "bms":{"name":"BSJBD202210-24-0007","refresh":5,"sleepVoltage":26400,"wakeUpVoltage":26800,"debug":3}}
