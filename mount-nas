@@ -1,4 +1,0 @@
-#!/bin/sh
-mount -t nfs nas-server:/volume1/photo /mnt/nas-server/photo
-mount -t nfs nas-server:/volume1/video /mnt/nas-server/video
-mount -t nfs nas-server:/volume1/music /mnt/nas-server/music
