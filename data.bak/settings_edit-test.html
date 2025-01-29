@@ -1,0 +1,173 @@
+<html lang="en" xml:lang="en" data-bs-theme="%theme%">
+<head>
+ <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="shortcut icon"
+ href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHsSURBVDhPrZLLSxtRFMZHY9A2Wou0FB+oiZUWTaPEVo15qInBjamSqLFVk0rV0ke0saAmgg90o5v42NQHCmYkXehC/wbFuK//gG6yyiIki0Dg69zDEEgp46L+4HKHc8/3zTnnXg7/yf0b7O7tIZVK0XcikaBdCjKIx+MI8jzGxj+hWadHu9mC94NDlHAXZBAIrENTVw+O49LrlaYOfv8cJUnBnV9cYNjlJlGOPBfZMnnaZGrqBw6DQTH131AFLtcHEjDxQ0UBunvsMBhMWFhcoiQpyODj6Fj6rz6fH03NOmpL2/BGmEkLnZdXVGJ+YRFPnj5DKPSLxAzu5uYWkUgEXba3KHxchP39AyhVVVheXoFarYHZ0oHPX76iplYNj2cCptY29DsHRLlYQTKZxOnpGaLRKFRV1dAbjLAJhsUlZdBqX8PpfIeS0jKhCiW+e73gsmQkZpABIxaL4ff1NbXxzeNBVnYOFPmPUP3iJazWTuQ9UNCQJyYnKef4+IR0aQMGzx/Bbu/Fz+0dDA4Nw+0ewfTMLFZX1+imWIw9NEdvPzY2t0iTYeAT7r1Fb4TBaBIeUwfNRal6TiU7HH0UY2dt7WY0NulIk2HwN2y4FosV8tw8XIbDYjQTSYPw1RUC6xvU0mGQF6OZSBrcDfAHIwsaPAvZdQgAAAAASUVORK5CYII=">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js "></script>
+ <title>%deviceName%</title>
+</head>
+
+<body>
+ <noscript><strong>We're sorry but it doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+ <div class="container-sm col-sm-10 col-md-6 col-lg-4">
+
+
+%header%
+<figure class="text-center"><h1>Edit Configuration</h1></figure>
+<form method="POST" action="/settingssave" enctype="multipart/form-data">
+
+<div class="input-group mb-0"><span class="input-group-text w-50" id="deviceNameDS">Device Name</span>
+ <input type="text" class="form-control" aria-describedby="deviceNameDS" id="devicename" name="_deviceName" value="%deviceName%" maxlength="20">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttServerDS">MQTT Server</span>
+ <input type="text" class="form-control" aria-describedby="mqttServerDS" id="mqttServerID" name="_mqttServer" value="%mqttServer%" maxlength="20">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttPortDS">MQTT Port</span>
+ <input type="text" class="form-control" aria-describedby="mqttPortDS" id="mqttPortID" name="_mqttPort" value="%mqttPort%" maxlength="5">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttUserDS">MQTT User</span>
+ <input type="text" class="form-control" aria-describedby="mqttUserDS" id="mqttuserID" name="_mqttUser" value="%mqttUser%" maxlength="20">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttPassDS">MQTT Password</span>
+ <input type="password" class="form-control" aria-describedby="mqttPassDS" id="mqttPassID" name="_mqttPass" value="%mqttPass%" maxlength="20">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttTopicDS">MQTT Topic</span>
+ <input type="text" class="form-control" aria-describedby="mqttTopicDS" id="mqttTopicID" name="_mqttTopic" value="%mqttTopic%" maxlength="20">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttRefreshDS">MQTT Refresh (sec)</span>
+ <input type="text" class="form-control" aria-describedby="mqttRefreshDS" id="mqttRefreshID" name="_mqttRefresh" value="%mqttRefresh%" maxlength="5">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttTriggerDS">MQTT Data Trigger</span>
+ <input type="text" class="form-control" aria-describedby="mqttTriggerDS" id="mqttTriggerID" name="_mqttTrigger" value="%mqttTrigger%" maxlength="80">
+</div>
+
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqttJsonDS">MQTT Json Style</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="mqttJsonDS" role="switch" id="mqttJsonID" name="_mqttJson" value="true" %mqttJson%>
+</div>
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="mqtthaDS">HA Discovery</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="mqtthaDS" role="switch" id="haDiscoveryID" name="_haDiscovery" value="true" %haDiscovery% onclick='HASwitch()'>
+ </div>
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="webuiThemeDS">WebUI Theme</span>
+ <div class="form-switch form-control" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="webuiThemeDS" role="switch" id="webuiThemeID" name="_webUItheme" value="true" %webUItheme%>
+</div>
+</div>
+
+<div class="input-group mb-0"><span class="input-group-text w-50" id="httpPortDS">HTTP Port</span>
+ <input type="text" class="form-control" aria-describedby="httpPortDS" id="httpPortID" name="_httpPort" value="%httpPort%" maxlength="5">
+</div>
+<div class="input-group mb-0"><span class="input-group-text w-50" id="httpUserDS">HTTP username</span>
+ <input type="text" class="form-control" aria-describedby="httpUserDS" id="httpUserID" name="_httpUser" value="%httpUser%" maxlength="20">
+</div>
+<div class="input-group mb-1"><span class="input-group-text w-50" id="httpPassDS">HTTP password</span>
+ <input type="password" class="form-control" aria-describedby="httpPassDS" id="httpPassID" name="_httpPass" value="%httpPass%" maxlength="20">
+</div>
+
+<div class="row gx-0 mb-0" id="esp01_settings" style="%esp01%">
+
+<div class="input-group mb-0"><span class="input-group-text w-100"><b>BMS Settings</b></span></div>
+
+<div class="input-group mb-0"><span class="input-group-text w-50" id="bmsRefreshDS">BMS Refresh (sec)</span>
+ <input type="text" class="form-control" aria-describedby="bmsRefreshDS" id="bmsRefreshID" name="_bmsRefresh" value="%bmsRefresh%" maxlength="5">
+</div>
+
+<div class="input-group mb-1"><span class="input-group-text w-50" id="wakeupDS">enable BMS Wakeup GPIO%wakeupPin%</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="wakeupDS" role="switch" id="wakeupenableID" name="_wakeup" value="true" %wakeup%>
+ </div>
+</div>
+
+<div class="input-group mb-0"><span class="input-group-text w-100"><b>Output Settings</b></span></div>
+
+<div class="input-group mb-0"><span class="input-group-text w-50" id="relayEnableDS">enable Output on GPIO%relayPin%</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="relayEnableDS" role="switch" id="relayenableID" name="_relayEnable" value="true" %relayEnable%
+ onclick='RelaySwitch()'>
+ </div>
+</div>
+
+<div class="relayConfig input-group mb-0"><span class="input-group-text w-50" id="invertDS">invert GPIO Output</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="invertDS" role="switch" id="relayinvertID" name="_relayInvert" value="true" %relayInvert%>
+ </div>
+</div>
+<div class="relayConfig input-group mb-0"><span class="input-group-text w-50" id="failsafeDS">Failsafe Mode</span>
+ <div class="form-switch form-control mqtt-settings-switch" style="width:50%%; text-align: center;">
+ <input type="checkbox" class="form-check-input form control" aria-describedby="failsafeDS" role="switch" id="relayfailsafeID" name="_relayFailsafe" value="true" %relayFailsave%>
+ </div>
+</div>
+<div class="relayConfig input-group mb-0"><span class="input-group-text w-50" id="functionDS">Function</span>
+ <select class="form-select" aria-describedby="functionDS" id="relayfunctionID" name="_relayFunction" onclick='RelayFunc()'>
+  <option value="1">lowest SoC</option>
+  <option value="2">highest SoC</option>
+  <option value="3">lowest Cell Voltage</option>
+  <option value="4">highest Cell Voltage</option>
+  <option value="5">Pack Cell Voltage</option>
+  <option value="6">Temperature</option>
+  <option value="0">manual over Web or MQTT</option>
+ </select>
+</div>
+<div class="relayConfig relayData input-group mb-0"><span class="input-group-text w-50" id="comparsionDS">Comparsion</span>
+ <select class="form-select" aria-describedby="comparsionDS" id="relaycomparsionID" name="_relayComp">
+  <option value="0">higher or equal than</option>
+  <option value="1">lower or equal than</option>
+ </select>
+ </div>
+<div class="relayConfig relayData input-group mb-0"><span class="input-group-text w-50" id="relaysetvalueDS">Value</span>
+ <input type="number" step="0.001" class="form-control" aria-describedby="relaysetvalueDS" id="relaysetvalue" name="_relayValue" value="%relayValue%" min="-100" max="100">
+</div>
+<div class="relayConfig relayData input-group mb-0"><span class="input-group-text w-50" id="hysteresisDS">Hysteresis</span>
+ <input type="number" step="0.001" class="form-control" aria-describedby="hysteresisDS" id="relayHysteresis" name="_relayHysteresis" value="%relayHysteresis%" min="-100" max="100">
+</div>
+</div>
+
+<div class="d-grid gap-2">
+ <input class="btn btn-primary" type="submit" value="save Settings">
+ <a class="btn btn-primary" href="/settings" role="button">back</a>
+</div>
+</form>
+
+<script>
+ $(document).ready(function (load) {
+  $("#relayfunctionID").val("%relayFunction%");
+  $("#relaycomparsionID").val("%relayComp%");
+ RelaySwitch();
+ HASwitch();
+ RelayFunc();
+});
+function HASwitch() {
+ if (document.getElementById('haDiscoveryId').checked) {
+  document.getElementById('mqttJsonId').checked=false;
+  document.getElementById('mqttJsonId').disabled=true;
+ }
+ document.getElementById('mqttJsonId').disabled=document.getElementById('haDiscoveryId').checked;
+}
+function RelaySwitch() {
+ var relayRows=document.getElementsByClassName("relayConfig");
+  for (var i=0; i<relayRows.length; i++) {
+   if (document.getElementById("relayenableID").checked) {
+    relayRows[i].style.display='';} else {relayRows[i].style.display='none';}
+ }
+}
+function RelayFunc() {
+var relayDR=document.getElementsByClassName("relayData");
+for (var i=0; i<relayDR.length; i++) {
+ if (document.getElementById("relayfunctionID").value==0 || !document.getElementById("relayenableID").checked) {
+  relayDR[i].style.display='none';}
+ else {relayDR[i].style.display='';}
+}}
+</script>
+%footer%
+<p hidden></p>

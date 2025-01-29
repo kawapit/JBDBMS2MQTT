@@ -1,0 +1,103 @@
+Binary compiled on Jul 21 2024 at 11:57:08
+reading eeprom settings...
+>> Settings <<
+HTTP Server: 192.168.6.145:80 user: admin/olpP
+MQTT Server: 192.168.6.182:1884 user: fhem/olpP5
+Device: Jbd2MQTT 1.1
+Topic: /ESP32-BMS2  Trigger: /Shelly.Relay1/cmnd/POWER1 1
+BMS Name: BSJBD202308-01-104
+MQTT/BMS Refresh: 20s/5s
+Sleep/Wakeup Voltages: 24V/24V  SoC min/max: 20%/95%
+Relay: disabled Mode: 0 State: off
+Debug-Level: 2 -1
+mounting SPIFFS... done!
+free: 48.53kB
+used: 62.01kB
+total: 110.55kB
+>> Files on SPIFFS <<
+F:/life.css size: 2.01kB
+F:/reboot.html size: 846Bytes
+F:/confirm_reset.html size: 255Bytes
+F:/style.css size: 1.85kB
+F:/footer.html size: 1.47kB
+F:/settings.html size: 6.97kB
+F:/config.json size: 293Bytes
+F:/footer.js size: 841Bytes
+F:/header.html size: 1.99kB
+F:/logout.html size: 198Bytes
+F:/favicon.ico size: 1.12kB
+F:/spiffs.html size: 4.45kB
+F:/settings_edit.html size: 8.89kB
+F:/life.html size: 13.33kB
+F:/bms.html size: 11.31kB
+reading config file: /config.json
+{"wifi":[{"ssid":"yash-it","pass":"0514487271902655"},{"ssid":"yash-it1","pass":"0514487271902655"}], "mqtt":{"server":"192.168.6.182","port":1884,"user":"fhem","pass":"olpP5","refresh":20}, "bms":{"name":"BSJBD202308-01-104","refresh":5,"sleepVoltage":26400,"wakeUpVoltage":26800,"debug":3}}
+scanning WiFi... done, 11 networks found:
+1: yash-it rssi: -53 type: WPA+WPA2
+2: yash-it rssi: -70 type: WPA+WPA2
+3: EKU rssi: -75 type: WPA2
+4: Gast Vale rssi: -89 type: WPA2
+5: FRITZ!Box 7590 VM rssi: -90 type: WPA2
+6: Alle_EXT rssi: -90 type: WPA2
+7: EKU rssi: -90 type: WPA+WPA2
+8: WLAN-273711 rssi: -90 type: WPA2
+9: gigacube-8B15 rssi: -91 type: WPA2
+10: WLAN-QTNM65 rssi: -92 type: WPA2
+11: WLAN-QTNM65 rssi: -92 type: WPA2
+connecting WiFi... connected to yash-it  rssi: -54  IP: 192.168.6.145
+WiFi setup done!
+setup time...  2024-07-22 08:34:17
+time setup ok
+MQTT setup done!
+MDNS responder started
+configuring Webserver...
+reading /header.html 2034bytes
+reading /footer.html 1510bytes
+starting Webserver: 192.168.6.145:80
+scanning Bluetooth...
+Name: Govee_H6199_2D2B, Address: c7:32:37:38:2d:2b, manufacturer data: 0288ec00020100
+Name: , Address: 28:80:e1:9f:0e:a3, manufacturer data: 060001092022a8908186a529cc5329854e45991b7efc7aee99144a6501
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS, 4 device(s), 1 BMS: a4:c1:37:42:c5:e2
+BLE setup done!
+new client created
+pairing device: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+failed to connect, deleted client
+lost MQTT connection, try to reconnect
+new client created
+pairing device: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+failed to connect, deleted client
+lost MQTT connection, try to reconnect
+new client created
+pairing device: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+failed to connect, deleted client
+lost MQTT connection, try to reconnect
+new client created
+pairing device: a4:c1:37:42:c5:e2... connect... connected to: a4:c1:37:42:c5:e2
+service ok, characteristic ok,  ␄wconnected to BMS2: BSJBD202308-01-104
+#100lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+connected to MQTT server: 192.168.6.182:1884
+subscribing topics
+subscribing trigger: /Shelly.Relay1/cmnd/POWER1 1
+#300#400#302#410#310#410␛[B#310#410#310sending data to WS..............#404#3012#403#306#403
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------

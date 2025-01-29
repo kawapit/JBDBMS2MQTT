@@ -1,0 +1,47 @@
+/*body {width:800px; background-color:skyblue; padding:10px; margin:0px;}*/
+body {max-width:65%; margin:0 auto; background-color:skyblue; padding:10px;}
+
+.topBar{font-size:30px; font-family:arial; font-weight:bold; text-align:center; padding:5px 0 5px 0;}
+.clear:before,
+.clear:after {content:""; display:table;}
+.clear:after {clear:both;}
+.clear {*zoom:1;}
+
+.title {float:left; font-family:arial; font-size:15px; font-weight:bold; text-align:center; padding:10px 0 5px 0;}
+.title-2 {float:left; font-family:arial; font-size:15px; font-weight:bold; text-align:center; padding:20px 0 5px 0;}
+.switch-title {font-family:arial; font-size:15px; font-weight:bold; text-align:center;/*padding:20px 0 5px 0;*/}
+
+.gauge {display:block;box-sizing:border-box;float:left;
+  /*border:1px solid #ddd;*/
+  /*margin:0 0 1% 0;*/
+  /*padding:20px 0 15px 0;*/
+}
+.size-1 {width:12.5%}
+.size-2 {width:20%}
+.size-3 {width:35%}
+.h-split {display:block; float:left; width:1%; min-height:100px;}
+/*new*/
+button {margin-bottom:1rem;border-radius:0.5em;background:#558ED5;padding:0.3em 0.3em;width:20%;color:white;font-size:100%;}
+
+table {width:100%; border-collapse:collapse; table-layout:fixed;}
+th,td {border:solid 1px; border-color:white;}
+.toggle {
+ /*float:left;*/
+ position:relative; width:80%; height:36px;
+ margin-top:20px; margin-right:auto; margin-bottom:20px; margin-left:auto;
+ border-radius:50px;
+ overflow:hidden;
+ cursor:pointer;
+}
+.toggle input[type=checkbox] {display:none;}
+.toggle:before {content:""; position:absolute; top:0; left:0; width:100%; height:100%;
+ display:block; background:#e9e9eb;
+ -webkit-transition:0.2s ease-out; transition:0.2s ease-out;
+}
+.toggle:after {content:""; position:absolute; top:3px; /*left:84%;*/ right:2%; width:30px; height:30px;
+ display:block; background:#fff; border-radius:50px;
+ box-shadow:0 9px 28px -6px rgba(0,0,0,0.3);
+ -webkit-transition:0.2s ease-out; transition:0.2s ease-out;
+}
+.toggle.checked:before {background:#35c759;}
+.toggle.checked:after {/*left:33px;*/left:2%; box-shadow:0 9px 28px -6px rgba(0,0,0,0.5);}

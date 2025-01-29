@@ -1,0 +1,107 @@
+%header%
+<figure class="text-center"><h2>SPIFFS File Manager</h2></figure>
+
+<div class="gx-0 bg-info bg-opacity-50 p-1 my-2">
+ <figure class="text-center"><h6>Build Time Stamp: %timestamp%</h6></figure>
+ <p><figure class="text-center"><h6>SPIFFS Storage: <span id="totalspiffs">%total%</span> | used: <span id="usedspiffs">%used%</span></h6></figure></p>
+</div>
+
+<div class="d-grid gap-1">
+ <a class="btn btn-primary" onclick="Directory()" role="button">Directory</a>
+ <a class="btn btn-primary" onclick="Upload()" role="button">upload</a>
+ <a class="btn btn-primary" onclick="Reboot()" role="button">reboot</a>
+ <a class="btn btn-primary" onclick="Logout()" role="button">logout</a>
+ <a class="btn btn-primary" href="/settings" role="button">back</a>
+</div>
+
+ <p id="statusID"></p>
+ <p id="directoryHeaderID"></p>
+ <p id="directoryDetailsID"></p>
+ <p id="uploadHeaderID"></p>
+ <p id="uploadID"></p>
+
+<script>
+function Logout() {
+ var xhr = new XMLHttpRequest(); xhr.open("GET","/logout",true); xhr.send();
+ setTimeout(function() { window.open("/logged-out","_self"); },1000);
+}
+function Reboot() {
+ document.getElementById("statusID").innerHTML="invoking Reboot...";
+ var xhr = new XMLHttpRequest(); xhr.open("GET","/reboot",true); xhr.send();
+ setTimeout(function() { window.open("/reboot","_self"); },500);
+}
+function Directory() {
+ xmlhttp=new XMLHttpRequest(); xmlhttp.open("GET","/directory",false); xmlhttp.send();
+ document.getElementById("directoryHeaderID").innerHTML="<h4>Files<h4>";
+ document.getElementById("directoryDetailsID").innerHTML=xmlhttp.responseText;
+}
+function DirectoryButtonHandler(filename,action) {
+ var urltocall = "/file?name="+"/"+filename+"&action="+action;
+ xmlhttp=new XMLHttpRequest();
+ if (action=="delete") {
+ xmlhttp.open("GET",urltocall,false); xmlhttp.send();
+ document.getElementById("statusID").innerHTML=xmlhttp.responseText;
+ xmlhttp.open("GET","/directory",false); xmlhttp.send();
+ document.getElementById("directoryDetailsID").innerHTML=xmlhttp.responseText;
+ }
+ if (action=="download") {
+ document.getElementById("statusID").innerHTML="";
+ window.open(urltocall,"_blank");
+ }
+}
+function Upload() {
+ document.getElementById("uploadHeaderID").innerHTML="<h4>upload File<h4>"
+ document.getElementById("statusID").innerHTML="";
+ var uploadform=
+ "<form id=\"uploadformID\" enctype=\"multipart/form-data\" method=\"post\">" +
+ "<input type=\"file\" name=\"file1\" id=\"file1\" onchange=\"UploadFile()\"><br>" +
+ "<progress id=\"progressBarID\" value=\"0\" max=\"100\" style=\"width:300px;\"></progress>" +
+ "<h4 id=\"statusID\"></h4>" +
+ "<p id=\"loaded_n_total\"></p>" +
+ "</form>";
+ document.getElementById("uploadID").innerHTML=uploadform;
+}
+function _(el) {
+ return document.getElementById(el);
+}
+
+function UploadFile() {
+ var file=_("file1").files[0];
+ // alert(file.name+" | "+file.size+" | "+file.type);
+ var formdata=new FormData();
+ formdata.append("file1",file);
+ var ajax=new XMLHttpRequest();
+ ajax.upload.addEventListener("progress",ProgressHandler,false);
+ ajax.addEventListener("load",CompleteHandler,false); // doesnt appear to ever get called even upon success
+ ajax.addEventListener("error",ErrorHandler,false);
+ ajax.addEventListener("abort",AbortHandler,false);
+ ajax.open("POST","/");
+ ajax.send(formdata);
+}
+
+function ProgressHandler(event) {_("loaded_n_total").innerHTML="Uploaded "+event.loaded+" bytes";
+ var percent=(event.loaded/event.total)*100;
+ _("progressBarID").value=Math.round(percent);
+ _("statusID").innerHTML=Math.round(percent)+"% uploaded... please wait";
+ if (percent>=100) {
+ _("statusID").innerHTML="done";
+ document.getElementById("directoryHeaderID").innerHTML="";
+ document.getElementById("directoryDetailsID").innerHTML="";
+ document.getElementById("uploadHeaderID").innerHTML="";
+ document.getElementById("uploadID").innerHTML="";
+ }
+}
+
+function CompleteHandler(event) {_("statusID").innerHTML="Upload complete"; _("progressBarID").value=0;
+ xmlhttp=new XMLHttpRequest(); xmlhttp.open("GET","/directory",false); xmlhttp.send();
+ document.getElementById("statusID").innerHTML="File uploaded";
+ document.getElementById("directoryHeaderID").innerHTML="<h4>Files<h4>";
+ document.getElementById("directoryDetailsID").innerHTML=xmlhttp.responseText;
+ document.getElementById("uploadHeaderID").innerHTML="";
+ document.getElementById("uploadID").innerHTML="";
+}
+function ErrorHandler(event) {_("statusID").innerHTML="Upload failed";}
+function AbortHandler(event) {_("statusID").innerHTML="aborted";}
+</script>
+</body>
+</html>

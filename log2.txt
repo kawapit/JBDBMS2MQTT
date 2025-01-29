@@ -1,0 +1,140 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+done, 4 networks found:
+1: yash-it rssi: -46 type: WPA+WPA2
+2: yash-it rssi: -59 type: WPA+WPA2
+3: EKU rssi: -75 type: WPA2
+4: WLAN-273711 rssi: -84 type: WPA2
+connecting Wifi... connected to yash-it  rssi: -47  IP: 192.168.6.145
+WiFi setup done!
+setup time...  2024-03-05 07:53:53
+time setup ok
+MQTT setup done!
+MDNS responder started
+configuring Webserver...
+reading /header.html 2038bytes
+reading /footer.html 1505bytes
+starting Webserver: 192.168.6.145:80
+scanning Bluetooth...
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+1 device(s) found, 1 BMS device(s) found: a4:c1:37:42:c5:e2
+BLE setup done!
+new client created
+pairing device: a4:c1:37:42:c5:e2... connect, connected to BMS: a4:c1:37:42:c5:e2
+wrong service UUID: 0000ff00-0000-1000-8000-00805f9b34fb
+BMS0: lost MQTT connection, try to reconnect
+/ESP32-BMS0/stat/test
+a4:c1:37:42:c5:e2 disconnected - starting new scan
+connected to MQTT server: 192.168.6.182:1884
+subscribing topics
+subscribing trigger: /Shelly.Relay1/cmnd/POWER1 1
+BLE advertised device found: 
+Name: ScanWatch 6A, Address: e6:d5:76:6d:42:ba, manufacturer data: ff03c1d0ea3f, serviceUUID: 00000020-5749-5448-005d-0024e4d46a6a, txPower: 0
+BLE advertised device found: 
+Name: , Address: 50:aa:de:0a:d4:7d, serviceUUID: 0xfef3
+Service Data:
+bh@ ;:-␅,ef3, Data: J␗#3F7R␑4z Aa␆ -)
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, serviceUUID: 0xff00
+found BMS
+end of scan
+reconnect to BMS: a4:c1:37:42:c5:e2... connect, reconnectedconnected to BMS: a4:c1:37:42:c5:e2
+service ok, lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+wrong characteristic UUID: 0000ff01-0000-1000-8000-00805f9b34fb
+BMS0: a4:c1:37:42:c5:e2 disconnected - starting new scan
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+end of scan
+reconnect to BMS: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+reconnect failed
+scanning Bluetooth...
+BLE advertised device found: 
+Name: ScanWatch 6A, Address: e6:d5:76:6d:42:ba, manufacturer data: ff03c1d0ea3f, serviceUUID: 00000020-5749-5448-005d-0024e4d46a6a, txPower: 0
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+3 device(s) found, 1 BMS device(s) found: a4:c1:37:42:c5:e2
+reconnect to BMS: a4:c1:37:42:c5:e2... connect, reconnectedconnected to BMS: a4:c1:37:42:c5:e2
+service ok, wrong characteristic UUID: 0000ff01-0000-1000-8000-00805f9b34fb
+BMS0: a4:c1:37:42:c5:e2 disconnected - starting new scan
+BLE advertised device found: 
+Name: , Address: 50:aa:de:0a:d4:7d, serviceUUID: 0xfef3
+Service Data:
+bh@ ;:-␅,ef3, Data: J␗#3F7R␑4z Aa␆ -)
+BLE advertised device found: 
+Name: ScanWatch 6A, Address: e6:d5:76:6d:42:ba, manufacturer data: ff03c1d0ea3f, serviceUUID: 00000020-5749-5448-005d-0024e4d46a6a, txPower: 0
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+end of scan
+reconnect to BMS: a4:c1:37:42:c5:e2... connect, reconnectedconnected to BMS: a4:c1:37:42:c5:e2
+service ok, characteristic ok, connected to BMS2: BSJBD202308-01-104
+:100 BMS2: a4:c1:37:42:c5:e2 disconnected - starting new scan
+BLE advertised device found: 
+Name: ScanWatch 6A, Address: e6:d5:76:6d:42:ba, manufacturer data: ff03c1d0ea3f, serviceUUID: 00000020-5749-5448-005d-0024e4d46a6a, txPower: 0
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+end of scan
+reconnect to BMS: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+reconnect failed
+scanning Bluetooth...
+BLE advertised device found: 
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS
+1 device(s) found, 1 BMS device(s) found: a4:c1:37:42:c5:e2
+reconnect to BMS: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+reconnect failed
+----------------------------
+[4728041][E][vfs_api.cpp:29] open(): header.html does not start with /
+client: 192.168.6.9 /file?name=header.html&action=download ERROR: file does not exist
+----------------------------------------------------
+pC=a4:c1:37:42:c5:e2 1
+reconnect to: a4:c1:37:42:c5:e2... lld_pdu_get_tx_flush_nb HCI packet count mismatch (1, 2)
+reconnect failed: trying again
+connect...  reconnected
+connected to: a4:c1:37:42:c5:e2
+service ok, characteristic ok, connected to BMS2: BSJBD202308-01-104
+>110>310>410p>510>310>410                                                                310p>403>310>410>310>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>303>410>310>410>310p>410>310>410p>310>410>310>410p>310>410>310>410p>310>410>310>410p>310>410>310>410p>310>410>310                                                                410p>310>410>310>410p>310>410>310>410p>310>410>310>410p>310>410>310p>410>310>403>303>410>303>410>306lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[566982][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+>409lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[569028][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[571076][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[573123][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+>303lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[575173][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[577221][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+[579272][E][WiFiClient.cpp:268] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+failed to connect to MQTT server
+>409lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+                                                                ailed to connect to MQTT server
+>306lost MQTT connection, try to reconnect
+/ESP32-BMS2/stat/test
+connected to MQTT server: 192.168.6.182:1884
+subscribing topics
+subscribing trigger: /Shelly.Relay1/cmnd/POWER1 1
+>403>303>403>303>409>306>4012>309>410>310>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>310p>410>310>410>310p
+

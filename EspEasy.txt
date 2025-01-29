@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>ESP-D1Mini1</title>
+<script>
+<!--function dept_onchange(frmselect) {frmselect.submit();}
+function rules_set_onchange(rulesselect) 
+{document.getElementById('rules').disabled = true;
+rulesselect.submit();}//-->
+</script>
+<script defer src='https:&#047;&#047;cdn.jsdelivr.net&#047;gh&#047;letscontrolit&#047;ESPEasy@mega-20210503&#047;static&#047;toasting.js' ></script><link rel='icon'  type='image&#047;x-icon'  href='https:&#047;&#047;cdn.jsdelivr.net&#047;gh&#047;letscontrolit&#047;ESPEasy@mega-20210503&#047;static&#047;favicon.ico' />
+<link rel='stylesheet'  type='text&#047;css'  href='https:&#047;&#047;cdn.jsdelivr.net&#047;gh&#047;letscontrolit&#047;ESPEasy@mega-20210503&#047;static&#047;espeasy_default.css' />
+</head>
+<body class='bodymenu'>
+<span class='message' id='rbtmsg'></span>
+<header class='headermenu'>
+<h1>ESP Easy Mega: ESP-D1Mini1 </h1>
+<BR>
+<div class='menubar'><a  class='menu active'  href='&#047;' >&#8962;
+<span class='showmenulabel'>Main</span></a><a  class='menu'  href='&#047;config' >&#9881;
+<span class='showmenulabel'>Config</span></a><a  class='menu'  href='&#047;controllers' >&#128172;
+<span class='showmenulabel'>Controllers</span></a><a  class='menu'  href='&#047;hardware' >&#128204;
+<span class='showmenulabel'>Hardware</span></a><a  class='menu'  href='&#047;devices' >&#128268;
+<span class='showmenulabel'>Devices</span></a><a  class='menu'  href='&#047;rules' >&#10740;
+<span class='showmenulabel'>Rules</span></a><a  class='menu'  href='&#047;tools' >&#128295;<span class='showmenulabel'>Tools</span></a></div></header><section><span class='message error'>
+</span><form><table  class='normal' >
+<TR><TH style='width:225px;'>System Info</TH><TH></TH>
+<TR><TD>Unit Number:</td><TD>51
+<TR><TD>Git Build:</td><TD>mega-20211224_f162ebf
+<TR><TD>Local Time:</td><TD>2024-03-01 07:43:41<TR><TD>Time Source:</td><TD>NTP
+<TR><TD>Uptime:</td><TD>29 days 21 hours 41 minutes
+<TR><TD>Load:</td><TD>6.65% (LC=3419)
+<TR><TD>Free RAM:</td><TD>17792
+<TR><TD>Free Stack:</td><TD>3696
+<TR><TD>IP Address:</td><TD>192.168.6.151
+<TR><TD>RSSI:</td><TD>-77 dBm (yash-it)
+<TR><TD>MQTT Client Connected:</td><TD><span class='enabled on'>&#10004;</span>
+<TR><TD><TD> <a class='button link' href='sysinfo'>More info</a></table><BR><BR><table  class='multirow' >
+<TR><TH>Node List</TH><TH>Name</TH><TH>Build</TH><TH>Type</TH>
+<TH style='width:160px;'>IP</TH><TH>Age</TH></table></form></section>
+<footer><br>
+<h6>Powered by <a href='http://www.letscontrolit.com' style='font-size: 15px; text-decoration: none'>Let's Control It
+</a> community<div style='float: right'>Build: <a href='https://github.com/letscontrolit/ESPEasy/releases' title='Click to show latest release on Github' target='_blank' style='font-size: 15px; text-decoration: none'>ESP_Easy_mega_20211224_normal_ESP8266_4M1M_VCC Dec 24 2021</a></div></h6>
+</footer></body>
+</html>

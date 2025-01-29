@@ -1,0 +1,24 @@
+%header%
+<figure class="text-center"><h3>rebooting </h3><h4 id="wait">.</h4></figure>
+<div class="d-grid gap-2"><a class="btn btn-primary" href="/" role="button">Main</a></div>
+
+<script>
+$(document).ready(function() {
+window.dotsGoingUp=true;
+var dots = window.setInterval(function() {
+ var wait=document.getElementById("wait");
+ if (window.dotsGoingUp) wait.innerHTML+=".";
+ else {wait.innerHTML=wait.innerHTML.substring(1,wait.innerHTML.length);if (wait.innerHTML===".") window.dotsGoingUp=true;}
+ if (wait.innerHTML.length > 9) window.dotsGoingUp=false;},100);
+ setTimeout(StartCheck,2000);
+
+function StartCheck() {
+ setInterval(ServerReachable,1000);
+}
+function ServerReachable() {
+ $.get("/").done(function() {window.location="/";console.log("success");})
+  .fail(function() {console.log("failed.");});}
+});
+</script>
+%footer%
+<p hidden></p>

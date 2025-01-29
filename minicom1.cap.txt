@@ -1,0 +1,151 @@
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.310V  cell2: 3.308V  cell3: 3.309V  cell4: 3.307V  cell5: 3.308V  cell6: 3.309V  cell7: 3.309V  cell8: 3.308V  
+cell1 max: 3.310V  cell4 min: 3.307V  difference: 0.003V
+average: 3.308V  median: 3.308V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.47V  current: -6.17A
+soc Ah: 168.95Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.312V  cell2: 3.310V  cell3: 3.311V  cell4: 3.311V  cell5: 3.312V  cell6: 3.311V  cell7: 3.311V  cell8: 3.310V  
+cell1 max: 3.312V  cell2 min: 3.310V  difference: 0.002V
+average: 3.311V  median: 3.311V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.47V  current: -6.33A
+soc Ah: 168.93Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.310V  cell2: 3.308V  cell3: 3.309V  cell4: 3.307V  cell5: 3.308V  cell6: 3.309V  cell7: 3.309V  cell8: 3.308V  
+cell1 max: 3.310V  cell4 min: 3.307V  difference: 0.003V
+average: 3.308V  median: 3.308V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.48V  current: -6.33A
+soc Ah: 168.92Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.312V  cell2: 3.310V  cell3: 3.311V  cell4: 3.311V  cell5: 3.312V  cell6: 3.311V  cell7: 3.311V  cell8: 3.310V  
+cell1 max: 3.312V  cell2 min: 3.310V  difference: 0.002V
+average: 3.311V  median: 3.311V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.47V  current: -6.17A
+soc Ah: 168.90Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.310V  cell2: 3.308V  cell3: 3.309V  cell4: 3.309V  cell5: 3.308V  cell6: 3.309V  cell7: 3.309V  cell8: 3.308V  
+cell1 max: 3.310V  cell2 min: 3.308V  difference: 0.002V
+average: 3.308V  median: 3.309V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.48V  current: -6.17A
+soc Ah: 168.88Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.312V  cell2: 3.310V  cell3: 3.309V  cell4: 3.309V  cell5: 3.310V  cell6: 3.309V  cell7: 3.309V  cell8: 3.310V  
+cell1 max: 3.312V  cell3 min: 3.309V  difference: 0.003V
+average: 3.309V  median: 3.309V
+:310 
+
+BMS request basic data... BMS2: a4:c1:37:42:c5:e2 disconnected, starting new scan
+Name: , Address: 44:93:44:74:ff:31, manufacturer data: 8f031e113432397010304182018526570103048315c3, serviceUUID: 0xfdaa
+Service Data:
+UUID: 0xfdaa, Data: Xiaomi Pad 6
+Name: , Address: c0:16:93:b5:83:be, serviceUUID: 0xfef3
+Service Data:
+UUID: 0xfef3, Data: J#0TAV4sÖrXš¯@QÅn~7e%Þk
+Name: BSJBD202308-01-104, Address: a4:c1:37:42:c5:e2, manufacturer data: e2c54237c1a4, serviceUUID: 0xff00
+found BMS, end of scan
+reconnect to: a4:c1:37:42:c5:e2... connect...  reconnected
+connected to: a4:c1:37:42:c5:e2
+service ok, characteristic ok, connected to BMS2: BSJBD202308-01-104
+
+
+:100 :300 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.47V  current: -6.17A
+soc Ah: 168.85Ah  soc: 73%  cycles: 2
+temp1: 25.0Â°C  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.312V  cell2: 3.310V  cell3: 3.311V  cell4: 3.311V  cell5: 3.312V  cell6: 3.311V  cell7: 3.311V  cell8: 3.310V  
+cell1 max: 3.312V  cell2 min: 3.310V  difference: 0.002V
+average: 3.311V  median: 3.311V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.48V  current: -6.33A
+soc Ah: 168.83Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.312V  cell2: 3.310V  cell3: 3.311V  cell4: 3.309V  cell5: 3.310V  cell6: 3.311V  cell7: 3.309V  cell8: 3.310V  
+cell1 max: 3.312V  cell4 min: 3.309V  difference: 0.003V
+average: 3.310V  median: 3.310V
+:310 
+BMS request basic data... packet ok, process basic data... 
+>> Basic Data <<
+voltage: 26.47V  current: -6.33A
+soc Ah: 168.81Ah  soc: 73%  cycles: 2
+temp1: 25.0ÂC  temp2: 24.2ÂC  temp3: 24.1ÂC
+balance code low: 0x0  balance code high: 0x0
+protection state: 0x0 
+MosFet state: 0x3  charging: on discharging: on
+:410 
+BMS request cell data... packet ok, process cell data...
+>> Cell Data <<
+number of cells: 8
+cell1: 3.310V  cell2: 3.308V  cell3: 3.309V  cell4: 3.309V  cell5: 3.310V  cell6: 3.309V  cell7: 3.309V  cell8: 3.308V  
+cell1 max: 3.310V  cell2 min: 3.308V  difference: 0.002V
+average: 3.309V  median: 3.309V

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" xml:lang="en" data-bs-theme="%theme%">
+<head>
+ <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ <link rel="stylesheet" type="text/css" href="life.css">
+
+ <link rel="shortcut icon"
+ href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHsSURBVDhPrZLLSxtRFMZHY9A2Wou0FB+oiZUWTaPEVo15qInBjamSqLFVk0rV0ke0saAmgg90o5v42NQHCmYkXehC/wbFuK//gG6yyiIki0Dg69zDEEgp46L+4HKHc8/3zTnnXg7/yf0b7O7tIZVK0XcikaBdCjKIx+MI8jzGxj+hWadHu9mC94NDlHAXZBAIrENTVw+O49LrlaYOfv8cJUnBnV9cYNjlJlGOPBfZMnnaZGrqBw6DQTH131AFLtcHEjDxQ0UBunvsMBhMWFhcoiQpyODj6Fj6rz6fH03NOmpL2/BGmEkLnZdXVGJ+YRFPnj5DKPSLxAzu5uYWkUgEXba3KHxchP39AyhVVVheXoFarYHZ0oHPX76iplYNj2cCptY29DsHRLlYQTKZxOnpGaLRKFRV1dAbjLAJhsUlZdBqX8PpfIeS0jKhCiW+e73gsmQkZpABIxaL4ff1NbXxzeNBVnYOFPmPUP3iJazWTuQ9UNCQJyYnKef4+IR0aQMGzx/Bbu/Fz+0dDA4Nw+0ewfTMLFZX1+imWIw9NEdvPzY2t0iTYeAT7r1Fb4TBaBIeUwfNRal6TiU7HH0UY2dt7WY0NulIk2HwN2y4FosV8tw8XIbDYjQTSYPw1RUC6xvU0mGQF6OZSBrcDfAHIwsaPAvZdQgAAAAASUVORK5CYII=">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.5.1/justgage.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js "></script>
+ <title>LiFePO4 Jbd%bmsAlias%</title>
+</head>
+
+<body>
+ <noscript><strong>We're sorry but it doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+ <div class="container-sm col-sm-10 col-md-6 col-lg-8">
+
+ <div class="topBar">LiFePO4 %bmsAlias%</div>
+ <div class="title size-3">voltage</div>
+ <div class="title size-3">current</div>
+ <div class="title size-2">ntc 1</div>
+ <div class="clear"></div><div id="voltageID" class="gauge size-3"></div>
+ <div class="h-split"></div><div id="currentID" class="gauge size-3"></div>
+ <div class="h-split"></div><div id="temp1ID" class="gauge size-2"></div>
+ <div class="clear"></div>
+
+ <div class="title size-3">soc</div>
+ <div class="title size-3">cell diff</div>
+ <div class="title size-2">ntc 2</div>
+ <div class="clear"></div><div id="socID" class="gauge size-3"></div>
+ <div class="h-split"></div><div id="cellDiffID" class="gauge size-3"></div>
+ <div class="h-split"></div><div id="temp2ID" class="gauge size-2"></div>
+ <div class="clear"></div>
+
+ <div class="title size-2">cell 1</div>
+ <div class="title size-2">cell 2</div>
+ <div class="title size-2">cell 3</div>
+ <div class="title size-2">cell 4</div>
+ <div class="clear"></div>
+ <div id="cell1ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell2ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell3ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell4ID" class="gauge size-2"></div><div class="clear"></div>
+
+ <div class="title size-2">cell 5</div>
+ <div class="title size-2">cell 6</div>
+ <div class="title size-2">cell 7</div>
+ <div class="title size-2">cell 8</div>
+ <div class="clear"></div>
+ <div id="cell5ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell6ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell7ID" class="gauge size-2"></div><div class="h-split"></div>
+ <div id="cell8ID" class="gauge size-2"></div><div class="clear"></div>
+
+<table>
+<tr>
+<td rowspan="2">
+ <div class="switch-title">charge</div><div class="toggle" id="chargeStateID" onclick="mosfetControl(this)"><input type="checkbox" name="chargeState" /></div>
+</td>
+<td rowspan="2">
+ <div class="switch-title">discharge</div><div class="toggle" id="dischargeStateID" onclick="mosfetControl(this)"><input type="checkbox" name="dischargeState" /></div>
+</td>
+<td rowspan="2">
+ <div class="switch-title">BLE</div><div class="toggle" id="BLEStateID" onclick="disconnectBLE(this)"><input type="checkbox" name="BLEState" /></div>
+</td>
+
+<td style="border-right:none; width:60px"><div class="switch-title">C1</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID0"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"><div class="switch-title">C2</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID1"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"> <div class="switch-title">C3</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID2"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"><div class="switch-title">C4</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID3"><input type="checkbox" name="cellBalance" /></div></td>
+</tr>
+<tr>
+<td style="border-right:none; width:60px"><div class="switch-title">C5</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID4"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"><div class="switch-title">C6</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID5"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"><div class="switch-title">C7</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID6"><input type="checkbox" name="cellBalance" /></div></td>
+<td style="border-right:none; width:60px"><div class="switch-title">C8</div></td>
+<td style="border-left:none;"><div class="toggle" id="cellBalanceID7"><input type="checkbox" name="cellBalance" /></div></td>
+</tr>
+</table>
+
+<table>
+<td rowspan="2">
+<div class="row gx-0 mb-2 bg-light rounded bg-opacity-50 px-2">
+ <div class="col">charge</div><div class="col dF">
+  <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="chargeStateID"></div></div>
+</div>
+<td>
+<div class="row gx-0 mb-2 bg-light rounded bg-opacity-50 px-2">
+ <div class="col">discharge</div><div class="col dF">
+  <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="dischargeStateID"></div></div>
+</div>
+</td>
+<td>
+<div class="row gx-0 mb-2 bg-light rounded bg-opacity-50 px-2">
+ <div class="col">BMS</div><div class="col dF">
+  <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="bmsStateID"></div></div>
+</div>
+</td>
+</table>
+
+<div class="d-grid gap-2">
+<a class="btn btn-primary" href="/" role="button">back</a>
+</div>
+
+<script>
+// new
+$(document).ready(function() {
+ initWebSocket();
+ initButton();
+ setInterval(refreshAlert,5000);
+});
+function initWebSocket() {
+ console.log('trying to open a WebSocket connection...');
+ websocket=new WebSocket(gateway);
+ websocket.onopen=onOpen;
+ websocket.onclose=onClose;
+ websocket.onerror=onError;
+ websocket.onmessage=onMessage;
+}
+function onOpen(event) {
+ console.log('Connection opened');
+ setInterval(checkWS,5000);
+}
+function onClose(event) {
+ document.getElementById("stateID").innerHTML='WS closed';
+ console.log('Connection closed');
+ setTimeout(initWebSocket,3000);
+}
+function onError(event) {
+ document.getElementById("stateID").innerHTML='WS lost';
+ console.log('Connection lost');
+}
+function onMessage(event) {
+ var data=JSON.parse(event.data);
+ document.getElementById("deviceNameID").innerHTML=data.BAT.name;
+ document.getElementById("deviceAliasID").innerHTML='Jbd'+data.BAT.alias;
+ document.getElementById("stateID").innerHTML=data.BAT.state;
+ document.getElementById("voltageID").innerHTML=data.BAT.voltage+'V  ';
+ document.getElementById("currentID").innerHTML=data.BAT.current+'A  ';
+ document.getElementById("powerID").innerHTML=Math.round(data.BAT.power)+'W  ';
+ document.getElementById("SoCID").innerHTML=data.BAT.soc+'%%';
+ $('#SoCID').width(data.BAT.soc+"%").attr('aria-valuenow',data.BAT.soc);
+ document.getElementById("remainingID").innerHTML=data.BAT.soc_Ah+'Ah ';
+ document.getElementById("cellHID").innerHTML=data.CELLS.imax+'? '+data.CELLS.max+'V ';
+ document.getElementById("cellLID").innerHTML=data.CELLS.imin+'? '+data.CELLS.min+'V ';
+ document.getElementById("cyclesID").innerHTML=data.BAT.cycles+' ';
+ document.getElementById("temp1ID").innerHTML=data.TEMP.temp1+'°C ';
+ document.getElementById("temp2ID").innerHTML=data.TEMP.temp2+'°C ';
+ document.getElementById("temp3ID").innerHTML=data.TEMP.temp3+'°C ';
+ document.getElementById("cellDiffID").innerHTML=data.CELLS.diff+'V ';
+ document.getElementById("chargeStateID").checked=data.BAT.charging;
+ document.getElementById("dischargeStateID").checked=data.BAT.discharging;
+ document.getElementById("cellBalanceActiveID").checked=data.BAT.balance;
+ document.getElementById("relayActiveID").checked=data.REL.active;
+ //BarChart(data);
+ //Alert(data);
+}
+
+function initButton() {
+ document.getElementById('chargeStateID').addEventListener('click',ChargeSwitch);
+ document.getElementById('dischargeStateID').addEventListener('click',DischargeSwitch);
+ document.getElementById('bmsStateID').addEventListener('click',BMSSwitch);
+}
+function ChargeSwitch() {
+ let switchVal;
+ if (document.getElementById('chargeStateID').checked) {switchVal='charge_on'} else {switchVal='charge_off'}
+ websocket.send(switchVal);
+}
+function DischargeSwitch() {
+ let switchVal;
+ if (document.getElementById('dischargeStateID').checked) {switchVal='discharge_on'} else {switchVal='discharge_off'}
+ websocket.send(switchVal);
+}
+function BMSSwitch() {
+ let switchVal;
+ if (document.getElementById('bmsStateID').checked) {switchVal='bms_on'} else {switchVal='bms_off'}
+ websocket.send(switchVal);
+}
+
+var bmsState;
+function toggleSwitch(element,mode){
+switch (mode){
+ case 3:
+  if (element.classList.contains('checked')) element.classList.remove('checked'); else element.classList.add('checked');
+  break;
+ case 1:
+  if (!element.classList.contains('checked')) element.classList.add('checked');
+  break;
+ case 0:
+  if (element.classList.contains('checked')) element.classList.remove('checked');
+  break;
+ }
+};
+ /*
+var chargeStateChanged=false;
+function chargeSwitch(element) {
+ if (element.classList.contains('checked')){fetch('/disableCharge')
+ .then(response=>{element.classList.remove('checked');})
+ .catch((error)=>{console.error('Error:',error);});
+ } else {fetch('/enableCharge')
+ .then(response=>{element.classList.add('checked');})
+ .catch((error)=>{console.error('Error:',error);});
+ }
+ chargeStateChanged=true;
+};
+ */
+function mosfetControl(element) {
+if (element.id=="chargeStateID") bmsState.mosfetState.chargeState^=1;
+else bmsState.mosfetState.dischargeState^=1;
+$.ajax({
+ type:"POST",url:'/mosfetCtrl',
+ data:JSON.stringify(bmsState.mosfetState),
+ contentType:'application/json', dataType:"json",
+ success:function (data) {console.log('mosfetControl sucseeded:'+JSON.stringify(data))},
+ error:function (data) {alert(data.response);}
+});
+/*
+ fetch('/mosfetCtrl',{method:'POST',headers:{'Conten-Type':'application/json'},body JSON.stringify(bmsState.mosfetState)})
+ .then(response=>{console.log('mosfetControl');})
+ .catch((error)=>{console.error('Error:',error);});
+*/
+};
+
+function disconnectBLE(element) {
+ fetch('/disconnectBLE')
+ .then(response=>{console.log('disconnectBLE');})
+ .catch((error)=>{console.error('Error:',error);});
+}
+
+document.addEventListener("DOMContentLoaded",function (event) {
+var cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8,cellDiff,voltage,current,soc,temp1,temp2;
+
+var defs1={
+ //label:"label",
+ //value:3.5, min:0,max:4,decimals:3,
+ gaugeWidthScale:0.6,
+ //hideMinMax:true,
+ minLabelMinFontSize:14,maxLabelMinFontSize:14,
+ pointer:true,pointerOptions:{toplength:10,bottomlength:10,bottomwidth:3},valueMinFontSize:26,
+ counter:true,relativeGaugeSize:true
+}
+
+var defs2={
+ //label:"label",
+ //value:35,min:0,max:100,decimals:0,
+ gaugeWidthScale:0.6,
+ pointer:true,pointerOptions:{toplength:5,bottomlength:15,bottomwidth:2},
+ counter:true,donut:true,relativeGaugeSize:true
+}
+
+current=new JustGage({id:"currentID",defaults:defs1,min:-40,max:40,decimals:2,symbol:"A"});
+voltage=new JustGage({id:"voltageID",defaults:defs1,max:30,min:20,value:25,decimals:2,symbol:"V"});
+temp1=new JustGage({id:"temp1ID",defaults:defs1,max:50,decimals:1,symbol:" C"});
+temp2=new JustGage({id:"temp2ID",defaults:defs1,max:50,decimals:1,symbol:" C"});
+soc=new   JustGage({id:"socID",defaults:defs1,max:100, decimals:0,symbol:"%"});
+cell1=new JustGage({id:"cell1ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell2=new JustGage({id:"cell2ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell3=new JustGage({id:"cell3ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell4=new JustGage({id:"cell4ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell5=new JustGage({id:"cell5ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell6=new JustGage({id:"cell6ID",defaults:defs1,max:4,value:3.5,decimals:3,symbol:"V"});
+cell7=new JustGage({id:"cell7ID",defaults:defs1,label:"Cell-7",max:4,value:3.5,decimals:3,symbol:"V"});
+cell8=new JustGage({id:"cell8ID",defaults:defs1,label:"Cell-8",max:4,value:3.5,decimals:3,symbol:"V"});
+cellDiff=new JustGage({id:"cellDiffID",defaults:defs1,max:0.3,decimals:3,symbol:"V"});
+
+function cellColorChange(value,median) {
+ var dif=value-median;
+ if (dif>0.02) return "#FF0000";
+ if (dif<-0.02) return "#FFFF00";
+ return "#000000";
+}
+
+function jsonRequest(){
+ fetch("/lifeJson")
+ .then(response=>response.json())
+ .then(data=>{bmsState=data;
+ var value=data.current/1000;
+ if (value>=0) {current.refresh(value,40,0);} else {current.refresh(value,0,-40);}
+ soc.refresh(data.soc);
+ temp1.refresh(data.temp1/10);
+ temp2.refresh(data.temp2/10);
+ voltage.refresh(data.voltage/1000);
+ cell1.refresh(data.cellVoltages[0]/1000);
+ cell2.refresh(data.cellVoltages[1]/1000);
+ cell3.refresh(data.cellVoltages[2]/1000);
+ cell4.refresh(data.cellVoltages[3]/1000);
+ cell5.refresh(data.cellVoltages[4]/1000);
+ cell6.refresh(data.cellVoltages[5]/1000);
+ cell7.refresh(data.cellVoltages[6]/1000);
+ cell8.refresh(data.cellVoltages[7]/1000);
+ cellDiff.refresh(data.cellDiff/1000);
+
+ cell1.update('valueFontColor',cellColorChange(data.cellVoltages[0],data.cellMedian));
+ cell2.update('valueFontColor',cellColorChange(data.cellVoltages[1],data.cellMedian));
+ cell3.update('valueFontColor',cellColorChange(data.cellVoltages[2],data.cellMedian));
+ cell4.update('valueFontColor',cellColorChange(data.cellVoltages[3],data.cellMedian));
+ cell5.update('valueFontColor',cellColorChange(data.cellVoltages[4],data.cellMedian));
+ cell6.update('valueFontColor',cellColorChange(data.cellVoltages[5],data.cellMedian));
+ cell7.update('valueFontColor',cellColorChange(data.cellVoltages[6],data.cellMedian));
+ cell8.update('valueFontColor',cellColorChange(data.cellVoltages[7],data.cellMedian));
+
+ toggleSwitch(document.getElementById('chargeStateID'),data.mosfet.charge);
+ toggleSwitch(document.getElementById('dischargeStateID'),data.mosfet.discharge);
+ toggleSwitch(document.getElementById('BLEStateID'),data.connected);
+ for (i=0; i<8; i++) {toggleSwitch(document.getElementById('cellBalanceID'+i),data.cellBalances[i]);}
+}
+);
+};
+ setInterval(()=>{jsonRequest();},1000);
+});
+</script>
+</body>
+</html>
